@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.mainDiv {
+  min-height: 100vh;
+  padding-top: 15vh;
+}
+.text {
+  min-height: 30vh;
+}
+.text h1 {
+  text-align: center;
+  text-shadow: 1px 0 10px;
+  text-decoration: underline;
+}
+.text h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 0 10px;
+  text-decoration: underline;
+}
+.iconsDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+.icos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.icos i {
+  font-size: 170px;
+  text-shadow: 1px 0 5px;
+}
+.js {
+  background-color: #02d8fd;
+  box-shadow: 1px 0 10px;
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.java {
+  font-size: 55px;
+  margin-bottom: 13px;
+  text-shadow: 1px 0 10px;
+  float: right;
+  color: white;
+  position: relative;
+  right: 10px;
+  top: 50px;
+}
+
+.icos h2 {
+  color: white;
+  text-decoration: underline;
+  text-shadow: 1px 0 10px;
+}
+.icos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.iconsDiv2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10vh;
+}
+.borderDiv{
+    display: flex;
+justify-content: center;
+}
+.border{
+    border: 3px solid blue;
+    width: 60%;
+    border-color: #02d8fd;
+    box-shadow: 1px 0 10px;
+}

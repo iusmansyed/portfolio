@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.mainDiv{
+  min-height: 100vh;
+}
+.name {
+  padding-top: 30px;
+  min-height: 20vh;
+}
+.name h1 {
+  text-align: center;
+  text-shadow: 1px 0 10px;
+  text-decoration: underline;
+  font-size: 40px;
+}
+.name h2 {
+  text-align: center;
+  text-shadow: 1px 0 10px;
+  font-size: 20px;
+  color: white;
+  text-decoration: underline;
+}
+.subDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.About {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.text {
+  width: 70%;
+}
+.text h1{
+  text-shadow: 1px 0 10px;
+  text-decoration: underline;
+}
+.detail {
+  margin-top: 30px;
+  line-height: 25px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+}
+.image {
+  width: 30%;
+border: 10px solid #02d8fd;
+padding: 20px;
+box-shadow: 1px 0 10px;
+}
+.image img {
+  width: 90%;
+
+}

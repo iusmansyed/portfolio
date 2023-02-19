@@ -7,6 +7,21 @@
   pointer-events: none;
 }
 
+body {
+  background-color: #020206;
+  color: #02d8fd;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body::-webkit-scrollbar {
+  background-color: #02d8fd;
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 10px 1px 10px;
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
