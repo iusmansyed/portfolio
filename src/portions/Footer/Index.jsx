@@ -6,7 +6,7 @@ const Index = () => {
     <>
       <div className={styles.mainDiv}>
         <div className={styles.text}>
-          <h1>FRAMEWORKS AND LIBRARY</h1>
+          <h1>THE LANGUAGES</h1>
           <h2>ON WHICH I WORKED</h2>
         </div>
         <div className={styles.iconsDiv}>

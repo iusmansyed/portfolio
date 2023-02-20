@@ -15,6 +15,7 @@
   text-decoration: underline;
 }
 .text h2 {
+  margin-top: 10px;
   text-align: center;
   color: white;
   text-shadow: 1px 0 10px;
@@ -76,4 +77,12 @@ justify-content: center;
     width: 60%;
     border-color: #02d8fd;
     box-shadow: 1px 0 10px;
+}
+@media only screen and (max-width:855px) {
+  .iconsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4vh;
+  margin-bottom: 20vh;
+  }
 }

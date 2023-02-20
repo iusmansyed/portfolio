@@ -6,17 +6,20 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Index = () => {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [msgError, setMsgError] = useState(false);
+  const [mailError, setMailError] = useState(false);
+  const [txtError, setTxtError] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     if (message !== "" && email !== "" && name !== "") {
-        setEmail("");
-        setMessage("");
-        setName("");
-        e.preventDefault();
+      setEmail("");
+      setMessage("");
+      setName("");
+      e.preventDefault();
       toast("Your message has been send", {
         position: "top-right",
         autoClose: 5000,
@@ -42,8 +45,8 @@ const Index = () => {
             console.log(error.text);
           }
         );
-        
-    } else if (message === "" && email === "" && name === "") {
+      console.log(message, email, name);
+    } else {
       toast("please fill the fields", {
         position: "top-right",
         autoClose: 5000,
@@ -54,8 +57,10 @@ const Index = () => {
         progress: undefined,
         theme: "dark",
       });
-    } else {
-      console.log(":)")
+      setMsgError(true);
+      setMailError(true);
+      setTxtError(true);
+      console.log("hello world");
     }
   };
   return (
@@ -76,8 +81,34 @@ const Index = () => {
                   name="user_name"
                   onChange={(e) => setName(e.target.value)}
                   required
+                  style={{
+                    borderColor: msgError ? "red" : "",
+                    boxShadow: msgError ? "1px 0 20px red" : "",
+                  }}
                 />
               </span>
+
+              <div
+                style={{
+                  opacity: msgError ? 1 : 0,
+                  transition: "2s",
+                  marginTop: "10px",
+                  marginLeft: msgError ? "150px" : "",
+                }}
+                className={styles.alert}
+              >
+                <h5 style={{ color: "red", textShadow: "1px 0 10px" }}>
+                  PLEASE FILL THE FIELD{" "}
+                  <i
+                    class="ri-error-warning-line"
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      top: "5px",
+                    }}
+                  ></i>
+                </h5>
+              </div>
             </div>
             <div className={styles.form}>
               <h1>Enter Your Email</h1>
@@ -88,8 +119,33 @@ const Index = () => {
                   name="user_email"
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  style={{
+                    borderColor: mailError ? "red" : "",
+                    boxShadow: mailError ? "1px 0 20px red" : "",
+                  }}
                 />
               </span>
+              <div
+                style={{
+                  opacity: msgError ? 1 : 0,
+                  transition: "2s",
+                  marginTop: "10px",
+                  marginLeft: mailError ? "150px" : "",
+                }}
+                className={styles.alert}
+              >
+                <h5 style={{ color: "red", textShadow: "1px 0 10px" }}>
+                  PLEASE FILL THE FIELD{" "}
+                  <i
+                    class="ri-error-warning-line"
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      top: "5px",
+                    }}
+                  ></i>
+                </h5>
+              </div>
             </div>
             <div className={styles.form2}>
               <h1>Enter Your Message</h1>
@@ -99,7 +155,32 @@ const Index = () => {
                 name="message"
                 onChange={(e) => setMessage(e.target.value)}
                 required
+                style={{
+                  borderColor: txtError ? "red" : "",
+                  boxShadow: txtError ? "1px 0 20px red" : "",
+                }}
               />
+              <div
+                style={{
+                  opacity: msgError ? 1 : 0,
+                  transition: "2s",
+                  marginTop: "10px",
+                  marginLeft: mailError ? "250px" : "",
+                }}
+                className={styles.alert}
+              >
+                <h5 style={{ color: "red", textShadow: "1px 0 10px" }}>
+                  PLEASE FILL THE FIELD{" "}
+                  <i
+                    class="ri-error-warning-line"
+                    style={{
+                      fontSize: "20px",
+                      position: "relative",
+                      top: "5px",
+                    }}
+                  ></i>
+                </h5>
+              </div>
             </div>
           </div>
         </form>

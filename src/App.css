@@ -11,6 +11,7 @@ body {
   background-color: #020206;
   color: #02d8fd;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  
 }
 body::-webkit-scrollbar {
   background-color: #02d8fd;
