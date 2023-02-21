@@ -5,9 +5,15 @@ const Index = () => {
   return (
     <>
       <div className={styles.mainDiv}>
-        <div className={styles.text}>
+        <div
+          className={styles.text}
+         
+        >
+          <div>
+
           <h1>THE LANGUAGES</h1>
           <h2>ON WHICH I WORKED</h2>
+          </div>
         </div>
         <div className={styles.iconsDiv}>
           <div className={styles.icos}>
@@ -35,9 +41,9 @@ const Index = () => {
           </div>
         </div>
       </div>
-        <div className={styles.borderDiv}>
-          <div className={styles.border}></div>
-        </div>
+      <div className={styles.borderDiv}>
+        <div className={styles.border}></div>
+      </div>
     </>
   );
 };
